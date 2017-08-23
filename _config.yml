@@ -1,2 +1,4 @@
 name: nullptr.nl, my c++ projects and more
 markdown: kramdown
+
+theme: jekyll-theme-leap-day

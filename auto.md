@@ -26,6 +26,28 @@ Proposal, an anonymous variable:
 ================================
 
     auto = make_guard();
+    
+Example usage
+=============
+
+```
+template <typename T, typename = void>
+void foo() { }
+
+void log_function(const char* ) {}
+auto make_guard() { return 0; }
+
+void main()
+{
+	auto = log_function(__FUNCTION__);
+	auto = make_guard(mutex); 
+	
+	~~~ do stuff ~~~
+
+	// guard leaves scope 
+	// log_function leaves scope
+}
+```
 
 Pros
 ====

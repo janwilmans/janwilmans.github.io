@@ -29,12 +29,19 @@ Proposal, an anonymous variable:
 
 Pros
 ====
-- you cannot take a reference and the compiler can know this
-- you cannot move from it
-- you cannot copy it
+- its pure raii (and raii == beauty)
+- optimization opportunities ? since:
+  - you cannot take a reference and the compiler can know this
+  - you cannot move from it
+  - you cannot copy it
 - it is still guararenteed to be destroyed at the end of its scope as usual
+- look mam, no macros!
 
 Cons
 ====
-- there must be, but what are they?
-- channel Andrei Alexandrescu: 'destroy me'
+- not exciting?
+- no rainbows nor unicorns?
+
+
+- there must be cons, but what are they?
+- channel Andrei Alexandrescu: 'destroy me!'

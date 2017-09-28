@@ -62,6 +62,7 @@ Pros
   - you cannot copy it
 - it is still guararenteed to be destroyed at the end of its scope as usual
 - look mam, no macros!
+- syntax consistent with typename = void
 
 Cons
 ====

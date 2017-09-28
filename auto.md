@@ -15,8 +15,9 @@ Sounds like a meeting you can join to recover from overusing auto?
 
 Everybody has seen or writter this or similar:
 
-   __COUNTER__
-   This macro expands to sequential integral values starting from 0. In conjunction with the ## operator, this provides a convenient means    to generate unique identifiers.
+    __COUNTER__
+    This macro expands to sequential integral values starting from 0. In conjunction with the ## operator,
+    this provides a convenient means to generate unique identifiers.
 
 
 
@@ -24,7 +25,7 @@ Everybody has seen or writter this or similar:
 Proposal, an anonymous variable:
 ================================
 
-   auto = make_guard();
+    auto = make_guard();
 
 Pros
 ====

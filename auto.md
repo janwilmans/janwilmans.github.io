@@ -33,3 +33,8 @@ Pros
 - you cannot move from it
 - you cannot copy it
 - it is still guararenteed to be destroyed at the end of its scope as usual
+
+Cons
+====
+- there must be, but what are they?
+- channel Andrei Alexandrescu: 'destroy me'

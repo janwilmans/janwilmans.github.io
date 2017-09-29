@@ -58,12 +58,15 @@ Proposal, an anonymous variable:
 Example usage
 =============
 
-```
+```cpp
 template <typename T, typename = void>
 void foo() { }
 
-void log_function(const char* ) {}
-auto make_guard() { return 0; }
+template <typename F>
+scope_guard<F> make_guard(F f)
+{
+	return scope_guard<F>(f);
+}
 
 void main()
 {

@@ -71,7 +71,7 @@ scope_guard<F> make_guard(F f)
 void main()
 {
 	auto = log_function(__FUNCTION__);
-	auto = make_guard(mutex); 
+	auto = make_guard([] { end_of_scope_action(); }); 
 	
 	~~~ do stuff ~~~
 

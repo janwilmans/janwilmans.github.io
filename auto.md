@@ -24,7 +24,7 @@ Everybody has seen or writter this or similar:
 ```cpp
 struct LogFunction
 {
-	LogFunction(const char* func) : func_(func)
+    LogFunction(const char* func) : func_(func)
 	{
 		std::cout << func_.c_str() << " enter\n";
 	}
@@ -33,8 +33,8 @@ struct LogFunction
 	{
 		std::cout << func_.c_str() << " leave\n";
 	}
-private:
-	std::string func_;
+	private:
+		std::string func_;
 };
 
 

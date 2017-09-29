@@ -15,13 +15,13 @@ Sounds like a meeting you can join to recover from overusing auto?
 
 Everybody has seen or writter this or similar:
 
-```
+```cpp
     __COUNTER__
     This macro expands to sequential integral values starting from 0. In conjunction with the ## operator,
     this provides a convenient means to generate unique identifiers.
 ```
 
-```
+```cpp
 struct LogFunction
 {
 	LogFunction(const char* func) : func_(func)

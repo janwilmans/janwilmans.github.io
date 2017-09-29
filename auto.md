@@ -52,9 +52,9 @@ int main()
 
 Proposal, an anonymous variable:
 ================================
-
+```cpp
     auto = make_guard();
-    
+```    
 Example usage
 =============
 

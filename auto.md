@@ -22,7 +22,31 @@ Everybody has seen or writter this or similar:
 ```
 
 ```
-#define LOG_FUNCTION LogFunction foobar ## __COUNTER__(__FUNCTION__)
+struct LogFunction
+{
+	LogFunction(const char* func) : func_(func)
+	{
+		std::cout << func_.c_str() << " enter\n";
+	}
+
+	~LogFunction()
+	{
+		std::cout << func_.c_str() << " leave\n";
+	}
+private:
+	std::string func_;
+};
+
+
+#define STR_CONCAT_(a, b) a##b
+#define STR_CONCAT(a, b) STR_CONCAT_(a, b)
+#define LOG_FUNCTION LogFunction STR_CONCAT(log_function_, __COUNTER__) (__FUNCTION__)
+
+int main()
+{
+    LOG_FUNCTION;
+    return 0;
+}
 ```
 
 

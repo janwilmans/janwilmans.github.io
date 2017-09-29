@@ -25,16 +25,16 @@ Everybody has seen or writter this or similar:
 struct LogFunction
 {
     LogFunction(const char* func) : func_(func)
-	{
-		std::cout << func_.c_str() << " enter\n";
-	}
+    {
+        std::cout << func_.c_str() << " enter\n";
+    }
 
-	~LogFunction()
-	{
-		std::cout << func_.c_str() << " leave\n";
-	}
-	private:
-		std::string func_;
+    ~LogFunction()
+    {
+        std::cout << func_.c_str() << " leave\n";
+    }
+private:
+    std::string func_;
 };
 
 

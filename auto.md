@@ -77,13 +77,22 @@ void main()
 Pros
 ====
 - its pure raii (and raii == beauty)
+- it is still guararenteed to be destroyed at the end of its scope as usual
+- look mam, no macros!
+- syntax consistent with typename = void
+
+Observations
+=============
 - optimization opportunities ? since:
   - you cannot take a reference and the compiler can know this
   - you cannot move from it
   - you cannot copy it
-- it is still guararenteed to be destroyed at the end of its scope as usual
-- look mam, no macros!
-- syntax consistent with typename = void
+  
+Turns out this is not true, as pointed out by Ansel Sermersheim, you _can_ take its reference and so also move and copy it, if
+you pass its reference from its own constructor to another object.
+
+Appearently, this could be useful in TMP to add anonymous member functions to a class, why you would want to do that is another thing and not clear it me yet.
+
 
 Cons
 ====

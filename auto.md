@@ -1,5 +1,5 @@
-Auto Anonymous
-==============
+Auto Anonymous (unnamed variables)
+==================================
 
 Everybody has seen or written this or similar:
 
@@ -31,17 +31,11 @@ int main()
 }
 ```
 
-
-Proposal, an anonymous variable:
-================================
-```cpp
-    auto = make_guard();
-```    
-Improved example usage:
+Example usage:
 =======================
 
 ```cpp
-template <typename T, typename = void>
+template <typename T, typename = void>   // example of the typename = void syntax
 void foo() { }
 
 template <typename F>
@@ -64,9 +58,10 @@ void main()
 
 Pros
 ====
-- it is still guararenteed to be destroyed at the end of its scope as usual
+- it is RAII / guararenteed to be destroyed at the end of its scope as usual
 - syntax consistent with typename = void
-- less macros
+- less dependency on macros
+- less dependency on macros (so nice, I had to list it twice)
 
 Observations
 =============
@@ -76,7 +71,7 @@ Observations
   - you cannot move from it
   - you cannot copy it
   
-  Turns out this is not true, as pointed out by Ansel Sermersheim, you _can_ take its reference and so also move and copy it, if
+  Turns out most of this is not true, as pointed out by Ansel Sermersheim, you _can_ take its reference and so also move and copy it, if
   you pass its reference from its own constructor to another object.
 
   Appearently, this could be useful in TMP to add anonymous member functions to a class, why you would want to do that is another thing
@@ -85,5 +80,14 @@ Observations
 Cons
 ====
 - would it break anything?
-- are the plausible usecases worth the language extention?
 - no rainbows nor unicorns? if there are cons, what are they?
+
+Questions
+=========
+- are the presentered usecases worth a language extention?
+
+
+Existing discussion references:
+- https://groups.google.com/a/isocpp.org/forum/#!msg/std-proposals/8lsCinlSO1w/JWkYRnndCQAJ (closed)
+- https://groups.google.com/a/isocpp.org/forum/#!searchin/std-proposals/anonymous$20variable/std-proposals/BfAtczj81Kg/pga0JJ2JijwJ
+- https://groups.google.com/a/isocpp.org/forum/#!searchin/std-proposals/anonymous$20variable/std-proposals/OKUpODP9-7w/oQq-asoYCgAJ

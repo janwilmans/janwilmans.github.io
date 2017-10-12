@@ -77,7 +77,7 @@ As pointed out by Ansel Sermersheim, you _can_ take its reference if you pass it
 Appearently, this could be useful in TMP to add anonymous member functions to a class, why you would want to do that is not clear it me.
 
 ## Cons
-- SG14 discussion feedback: the auto = foo(); syntax is error-prone, it might be an accidentally ommitted name and currently that would give you an compiler error.
+- SG14/std-proposals discussion feedback: the auto = foo(); syntax is error-prone, it might be an accidentally ommitted name and currently that would give you an compiler error.
 
 ## Questions
 - are the presentered usecases worth a language extention?

@@ -6,6 +6,8 @@ A way to express concisely:
 - an object without a name that can conflict with any other name within the compilation unit.
 - express explicitly that an object is intented only to be constructed and destructed.
 
+Outline:
+
 ```cpp
 struct LogFunction
 {

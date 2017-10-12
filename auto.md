@@ -110,8 +110,7 @@ to allow multiple such variables on the same line. These are pretty verbose and 
 
 **Discussed in Rapperswil 2014:** Still encouraging a paper, Dennett to contact Yasskin about it.
 
-- https://groups.google.com/a/isocpp.org/forum/#!topic/std-proposals/gg3_eUhCuqo [Jan 2017]
-
-- https://groups.google.com/a/isocpp.org/forum/#!msg/std-proposals/8lsCinlSO1w/JWkYRnndCQAJ (closed)
-- https://groups.google.com/a/isocpp.org/forum/#!searchin/std-proposals/anonymous$20variable/std-proposals/BfAtczj81Kg/pga0JJ2JijwJ
-- https://groups.google.com/a/isocpp.org/forum/#!searchin/std-proposals/anonymous$20variable/std-proposals/OKUpODP9-7w/oQq-asoYCgAJ
+- https://groups.google.com/a/isocpp.org/forum/#!topic/std-proposals/gg3_eUhCuqo [Jan 2017, auto = foo(); syntax mention]
+- https://groups.google.com/a/isocpp.org/forum/#!msg/std-proposals/8lsCinlSO1w/JWkYRnndCQAJ [closed, 2016, FrankHB1989 coins term: unnamed variable)
+- https://groups.google.com/a/isocpp.org/forum/#!searchin/std-proposals/anonymous$20variable/std-proposals/BfAtczj81Kg/pga0JJ2JijwJ [2012]
+- https://groups.google.com/a/isocpp.org/forum/#!searchin/std-proposals/anonymous$20variable/std-proposals/OKUpODP9-7w/oQq-asoYCgAJ [2012]

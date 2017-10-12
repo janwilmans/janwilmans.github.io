@@ -87,7 +87,7 @@ Appearently, this could be useful in TMP to add anonymous member functions to a 
 - given the information an object's only purpose is for construction/destructor compilers would be free to emit warnings for instances of **named** objects that are not otherwise referenced.
 - to *not* break existing code such a warning would have to be opt-in (disabled by default)
 
-## Discussion 
+## Recent discussion 
 recent: https://groups.google.com/a/isocpp.org/forum/#!topic/std-proposals/OKUpODP9-7w
 from https://cplusplus.github.io/EWG/ewg-active.html#35 
 
@@ -95,6 +95,8 @@ from https://cplusplus.github.io/EWG/ewg-active.html#35
 
 **note that the [Auto macro itself](https://github.com/janwilmans/janwilmans.github.io/edit/master/auto.h) is a candidate to be implemented using the unnamed variable as proposed.**
 ```
+
+## Historical discussion 
 
 35. [tiny] Some concise way to generate a unique, unused variable name
 Section: 3.4 [basic.lookup] Status: Open Submitter: Jeffrey Yasskin Opened: 2012-10-24 Last modified: 2015-05-22

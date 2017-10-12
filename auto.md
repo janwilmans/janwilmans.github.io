@@ -1,7 +1,10 @@
-Auto Anonymous (unnamed variables)
-==================================
+Unnamed variables
+=================
 
-Everybody has seen or written this or similar:
+Purpose: 
+A way to express concisely:
+- an object without a name that can conflict with any other name within the compilation unit.
+- express explicitly that an object is intented only to be constructed and destructed.
 
 ```cpp
 struct LogFunction
@@ -32,7 +35,7 @@ int main()
 ```
 
 Example usage:
-=======================
+==============
 
 ```cpp
 template <typename T, typename = void>   // example of the typename = void syntax
@@ -54,17 +57,31 @@ void main()
 	// guard leaves scope 
 	// log_function leaves scope
 }
+
+or alternatively:
+
+void main()
+{
+	auto [] = log_function(__FUNCTION__);
+	auto [] = make_guard([] { end_of_scope_action(); }); 
+	
+	~~~ do stuff ~~~
+
+	// guard leaves scope 
+	// log_function leaves scope
+}
+
 ```
 
-Pros
-====
+Observations
+============
+
 - it is RAII / guararenteed to be destroyed at the end of its scope as usual
 - less dependency on macros
 - less dependency on macros (so nice, I had to list it twice)
 
 Syntax
 ======
-
 ```
 auto = foo();     // somewhat consistent with typename = void syntax
 auto [] = foo();  // Yasskin '12 syntax
@@ -110,7 +127,9 @@ to allow multiple such variables on the same line. These are pretty verbose and 
 
 **Discussed in Rapperswil 2014:** Still encouraging a paper, Dennett to contact Yasskin about it.
 
+- https://groups.google.com/a/isocpp.org/forum/#!msg/std-proposals/cdKMRUV41J8/Jf17FI-AAAAJ [Oct 2017, use case]
 - https://groups.google.com/a/isocpp.org/forum/#!topic/std-proposals/gg3_eUhCuqo [Jan 2017, auto = foo(); syntax mention]
 - https://groups.google.com/a/isocpp.org/forum/#!msg/std-proposals/8lsCinlSO1w/JWkYRnndCQAJ [closed, 2016, FrankHB1989 coins term: unnamed variable)
 - https://groups.google.com/a/isocpp.org/forum/#!searchin/std-proposals/anonymous$20variable/std-proposals/BfAtczj81Kg/pga0JJ2JijwJ [2012]
 - https://groups.google.com/a/isocpp.org/forum/#!searchin/std-proposals/anonymous$20variable/std-proposals/OKUpODP9-7w/oQq-asoYCgAJ [2012]
+

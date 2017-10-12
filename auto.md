@@ -91,8 +91,11 @@ Questions
 
 Discussion
 ==========
+
+```
 35. [tiny] Some concise way to generate a unique, unused variable name
 Section: 3.4 [basic.lookup] Status: Open Submitter: Jeffrey Yasskin Opened: 2012-10-24 Last modified: 2015-05-22
+```
 
 Sometimes we want to define a variable that's unused except for its constructor and destructor. lock_guard<mutex> and ScopeGuard are decent examples of this. In C++11, we have to manually name the variable something unique. Sometimes we use _some_name_##__LINE__ (suitably wrapped so the concatenation happens after expanding __LINE__) to try to generate unique names automatically, and gcc/clang have an extension _some_name_##__COUNTER__
 

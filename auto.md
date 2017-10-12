@@ -5,7 +5,7 @@ A way to express concisely:
 - an object without a name (so it can *not* conflict with any other name within its scope).
 - express explicitly the intent that an object is only to be constructed and destructed.
 
-## Outline:
+## Traditional code using macros:
 
 ```cpp
 struct LogFunction
@@ -35,7 +35,7 @@ int main()
 }
 ```
 
-## Example usage:
+## Example using unnamed variables:
 
 ```cpp
 template <typename T, typename = void>   // example of the typename = void syntax

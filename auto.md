@@ -1,12 +1,12 @@
-#Unnamed variables
+# Unnamed variables
 =================
 
-##Purpose: 
+## Purpose: 
 A way to express concisely:
 - an object without a name that can conflict with any other name within the compilation unit.
 - express explicitly that an object is intented only to be constructed and destructed.
 
-##Outline:
+## Outline:
 
 ```cpp
 struct LogFunction
@@ -36,7 +36,7 @@ int main()
 }
 ```
 
-##Example usage:
+## Example usage:
 
 ```cpp
 template <typename T, typename = void>   // example of the typename = void syntax
@@ -74,14 +74,14 @@ void main()
 
 ```
 
-##Syntax
+## Syntax
 
 ```
 auto = foo();     // somewhat consistent with typename = void syntax
 auto [] = foo();  // Yasskin '12 syntax
 ```
 
-##Observations
+## Observations
 
 - it is RAII / guararenteed to be destroyed at the end of its scope as usual
 - less dependency on macros
@@ -94,13 +94,13 @@ auto [] = foo();  // Yasskin '12 syntax
 As pointed out by Ansel Sermersheim, you _can_ take its reference if you pass its reference from its own constructor to another object.
 Appearently, this could be useful in TMP to add anonymous member functions to a class, why you would want to do that is not clear it me.
 
-##Cons
+## Cons
 - SG14 discussion feedback: the auto = foo(); syntax is error-prone, it might be an accidentally ommitted name and currently that would give you an compiler error.
 
-##Questions
+## Questions
 - are the presentered usecases worth a language extention?
 
-##Discussion 
+## Discussion 
 from https://cplusplus.github.io/EWG/ewg-active.html#35 
 ```
 

@@ -68,7 +68,7 @@ Syntax
 ```
 auto = foo();     // somewhat consistent with typename = void syntax
 auto [] = foo();  // Yasskin '12 syntax
-
+```
 
 Observations
 =============
@@ -93,10 +93,7 @@ histotical discusssions:
 
 ```
 35. [tiny] Some concise way to generate a unique, unused variable name
-
 Section: 3.4 [basic.lookup] Status: Open Submitter: Jeffrey Yasskin Opened: 2012-10-24 Last modified: 2015-05-22
-
-View all issues with Open status.
 
 Discussion:
 

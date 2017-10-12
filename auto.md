@@ -2,7 +2,7 @@
 
 ## Purpose: 
 A way to express concisely:
-- an object without a name that can *not* conflict with any other name within its scope.
+- an object without a name (so it can *not* conflict with any other name within its scope).
 - express explicitly that an object is intented only to be constructed and destructed.
 
 ## Outline:

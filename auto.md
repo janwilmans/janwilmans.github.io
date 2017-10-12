@@ -98,6 +98,10 @@ Appearently, this could be useful in TMP to add anonymous member functions to a 
 ## Discussion 
 recent: https://groups.google.com/a/isocpp.org/forum/#!topic/std-proposals/OKUpODP9-7w
 from https://cplusplus.github.io/EWG/ewg-active.html#35 
+
+(Arthur O'Dwyer mentioned that the Auto Macro is less error-prone)[https://groups.google.com/a/isocpp.org/d/msg/std-proposals/OKUpODP9-7w/aEQhdSWLAgAJ]
+
+
 ```
 
 35. [tiny] Some concise way to generate a unique, unused variable name

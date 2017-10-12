@@ -103,11 +103,11 @@ http://gcc.gnu.org/onlinedocs/gcc-4.7.2/cpp/Common-Predefined-Macros.html
 
 to allow multiple such variables on the same line. These are pretty verbose and not convenient for casual use. Haskell allows _ (underscore) to stand in for a variable that's not going to be used. Googlemock defines testing::_ to mean "don't care" as an argument, which is similar but not identical.
 
-Bristol 2013: Stroustrup wondered how unique the name needs to be, and wondered whether parallel builds would have problems ensuring the uniqueness. Naumann pointed out that having an unnamed variable is useful also for cases where you don't want the variable's address to be taken etc. Stroustrup and Van Winkel said this is not tiny, and a proper paper is necessary for this issue.
+**Bristol 2013:** Stroustrup wondered how unique the name needs to be, and wondered whether parallel builds would have problems ensuring the uniqueness. Naumann pointed out that having an unnamed variable is useful also for cases where you don't want the variable's address to be taken etc. Stroustrup and Van Winkel said this is not tiny, and a proper paper is necessary for this issue.
 
-Chicago 2013: Deemed not as C++14 material, Yasskin or someone else invited to write a paper, straw polls in favor of the feature. Things to consider in the paper: Consider double underscore "__". Can it be used only in local scope? For class members? For globals?
+**Chicago 2013:** Deemed not as C++14 material, Yasskin or someone else invited to write a paper, straw polls in favor of the feature. Things to consider in the paper: Consider double underscore "__". Can it be used only in local scope? For class members? For globals?
 
-Discussed in Rapperswil 2014. Still encouraging a paper, Dennett to contact Yasskin about it.
+**Discussed in Rapperswil 2014:** Still encouraging a paper, Dennett to contact Yasskin about it.
 
 
 - https://cplusplus.github.io/EWG/ewg-active.html#35 

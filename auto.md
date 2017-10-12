@@ -1,5 +1,4 @@
 # Unnamed variables
-=================
 
 ## Purpose: 
 A way to express concisely:
@@ -63,26 +62,22 @@ or alternatively:
 
 void main()
 {
-	auto [] = log_function(__FUNCTION__);
-	auto [] = make_guard([] { end_of_scope_action(); }); 
-	
-	~~~ do stuff ~~~
+    auto [] = log_function(__FUNCTION__);
+    auto [] = make_guard([] { end_of_scope_action(); }); 
 
-	// guard leaves scope 
-	// log_function leaves scope
+    ~~~ do stuff ~~~
+    // guard leaves scope 
+    // log_function leaves scope
 }
-
 ```
 
 ## Syntax
-
 ```
 auto = foo();     // somewhat consistent with typename = void syntax
 auto [] = foo();  // Yasskin '12 syntax
 ```
 
 ## Observations
-
 - it is RAII / guararenteed to be destroyed at the end of its scope as usual
 - less dependency on macros
 - less dependency on macros (so nice, I had to list it twice)

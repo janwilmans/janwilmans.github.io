@@ -75,13 +75,6 @@ void main()
 
 ```
 
-Observations
-============
-
-- it is RAII / guararenteed to be destroyed at the end of its scope as usual
-- less dependency on macros
-- less dependency on macros (so nice, I had to list it twice)
-
 Syntax
 ======
 ```
@@ -90,8 +83,11 @@ auto [] = foo();  // Yasskin '12 syntax
 ```
 
 Observations
-=============
-- its idiomatically consistent with c++ priciples / pure raii
+============
+
+- it is RAII / guararenteed to be destroyed at the end of its scope as usual
+- less dependency on macros
+- less dependency on macros (so nice, I had to list it twice)
 - optimization opportunities?
   - ~~you cannot take a reference and the compiler can know this~~
   - you cannot move from it
@@ -102,7 +98,7 @@ Appearently, this could be useful in TMP to add anonymous member functions to a 
 
 Cons
 ====
-- SG14 discussion feedback: the auto = foo(); syntax is error-prone, it might be an accidentally ommitted name, and currently that would give you an compiler error.
+- SG14 discussion feedback: the auto = foo(); syntax is error-prone, it might be an accidentally ommitted name and currently that would give you an compiler error.
 
 Questions
 =========

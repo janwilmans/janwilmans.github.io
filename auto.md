@@ -89,25 +89,25 @@ Questions
 =========
 - are the presentered usecases worth a language extention?
 
-histotical discusssions:
+Discussion
+==========
 
 ```
 35. [tiny] Some concise way to generate a unique, unused variable name
 Section: 3.4 [basic.lookup] Status: Open Submitter: Jeffrey Yasskin Opened: 2012-10-24 Last modified: 2015-05-22
-
-Discussion:
 
 Sometimes we want to define a variable that's unused except for its constructor and destructor. lock_guard<mutex> and ScopeGuard are decent examples of this. In C++11, we have to manually name the variable something unique. Sometimes we use _some_name_##__LINE__ (suitably wrapped so the concatenation happens after expanding __LINE__) to try to generate unique names automatically, and gcc/clang have an extension _some_name_##__COUNTER__
 
 http://gcc.gnu.org/onlinedocs/gcc-4.7.2/cpp/Common-Predefined-Macros.html
 
 to allow multiple such variables on the same line. These are pretty verbose and not convenient for casual use. Haskell allows _ (underscore) to stand in for a variable that's not going to be used. Googlemock defines testing::_ to mean "don't care" as an argument, which is similar but not identical.
+
 Bristol 2013: Stroustrup wondered how unique the name needs to be, and wondered whether parallel builds would have problems ensuring the uniqueness. Naumann pointed out that having an unnamed variable is useful also for cases where you don't want the variable's address to be taken etc. Stroustrup and Van Winkel said this is not tiny, and a proper paper is necessary for this issue.
 
 Chicago 2013: Deemed not as C++14 material, Yasskin or someone else invited to write a paper, straw polls in favor of the feature. Things to consider in the paper: Consider double underscore "__". Can it be used only in local scope? For class members? For globals?
 
 Discussed in Rapperswil 2014. Still encouraging a paper, Dennett to contact Yasskin about it.
-```
+
 
 - https://cplusplus.github.io/EWG/ewg-active.html#35 
 - https://groups.google.com/a/isocpp.org/forum/#!topic/std-proposals/gg3_eUhCuqo

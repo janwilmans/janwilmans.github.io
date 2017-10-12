@@ -82,6 +82,11 @@ Appearently, this could be useful in TMP to add anonymous member functions to a 
 ## Questions
 - are the presentered usecases worth a language extention?
 
+## Side effects
+
+- given the information an object's only purpose is for construction/destructor compilers would be free to emit warnings for instances of **named** objects that are not otherwise referenced.
+- to *not* break existing code such a warning would have to be opt-in (disabled by default)
+
 ## Discussion 
 recent: https://groups.google.com/a/isocpp.org/forum/#!topic/std-proposals/OKUpODP9-7w
 from https://cplusplus.github.io/EWG/ewg-active.html#35 

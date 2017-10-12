@@ -101,7 +101,7 @@ from https://cplusplus.github.io/EWG/ewg-active.html#35
 
 [Arthur O'Dwyer mentioned](https://groups.google.com/a/isocpp.org/d/msg/std-proposals/OKUpODP9-7w/aEQhdSWLAgAJ) that the Auto Macro is less error-prone
 
-**note that the Auto macro itself is a candidate to be implemented using the unnamed variable as proposed.**
+**note that the [Auto macro itself](https://github.com/janwilmans/janwilmans.github.io/edit/master/auto.h) is a candidate to be implemented using the unnamed variable as proposed.**
 ```
 
 35. [tiny] Some concise way to generate a unique, unused variable name

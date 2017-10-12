@@ -91,8 +91,6 @@ Questions
 
 Discussion
 ==========
-
-```
 35. [tiny] Some concise way to generate a unique, unused variable name
 Section: 3.4 [basic.lookup] Status: Open Submitter: Jeffrey Yasskin Opened: 2012-10-24 Last modified: 2015-05-22
 

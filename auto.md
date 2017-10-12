@@ -89,10 +89,11 @@ Questions
 =========
 - are the presentered usecases worth a language extention?
 
-Discussion
+Discussion 
 ==========
-
+from https://cplusplus.github.io/EWG/ewg-active.html#35 
 ```
+
 35. [tiny] Some concise way to generate a unique, unused variable name
 Section: 3.4 [basic.lookup] Status: Open Submitter: Jeffrey Yasskin Opened: 2012-10-24 Last modified: 2015-05-22
 ```
@@ -109,9 +110,8 @@ to allow multiple such variables on the same line. These are pretty verbose and 
 
 **Discussed in Rapperswil 2014:** Still encouraging a paper, Dennett to contact Yasskin about it.
 
+- https://groups.google.com/a/isocpp.org/forum/#!topic/std-proposals/gg3_eUhCuqo [Jan 2017]
 
-- https://cplusplus.github.io/EWG/ewg-active.html#35 
-- https://groups.google.com/a/isocpp.org/forum/#!topic/std-proposals/gg3_eUhCuqo
 - https://groups.google.com/a/isocpp.org/forum/#!msg/std-proposals/8lsCinlSO1w/JWkYRnndCQAJ (closed)
 - https://groups.google.com/a/isocpp.org/forum/#!searchin/std-proposals/anonymous$20variable/std-proposals/BfAtczj81Kg/pga0JJ2JijwJ
 - https://groups.google.com/a/isocpp.org/forum/#!searchin/std-proposals/anonymous$20variable/std-proposals/OKUpODP9-7w/oQq-asoYCgAJ

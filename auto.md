@@ -59,28 +59,31 @@ void main()
 Pros
 ====
 - it is RAII / guararenteed to be destroyed at the end of its scope as usual
-- syntax consistent with typename = void
 - less dependency on macros
 - less dependency on macros (so nice, I had to list it twice)
+
+Syntax
+======
+
+```
+auto = foo();     // somewhat consistent with typename = void syntax
+auto [] = foo();  // Yasskin '12 syntax
+
 
 Observations
 =============
 - its idiomatically consistent with c++ priciples / pure raii
-- ~~optimization opportunities ? since:~~
-  - you cannot take a reference and the compiler can know this
+- optimization opportunities?
+  - ~~you cannot take a reference and the compiler can know this~~
   - you cannot move from it
   - you cannot copy it
   
-  Turns out most of this is not true, as pointed out by Ansel Sermersheim, you _can_ take its reference and so also move and copy it, if
-  you pass its reference from its own constructor to another object.
-
-  Appearently, this could be useful in TMP to add anonymous member functions to a class, why you would want to do that is another thing
-  and not clear it me yet.
+As pointed out by Ansel Sermersheim, you _can_ take its reference if you pass its reference from its own constructor to another object.
+Appearently, this could be useful in TMP to add anonymous member functions to a class, why you would want to do that is not clear it me.
 
 Cons
 ====
-- SG14 
-- no rainbows nor unicorns? if there are cons, what are they?
+- SG14 discussion feedback: the auto = foo(); syntax is error-prone, it might be an accidentally ommitted name, and currently that would give you an compiler error.
 
 Questions
 =========

@@ -96,6 +96,7 @@ Appearently, this could be useful in TMP to add anonymous member functions to a 
 - are the presentered usecases worth a language extention?
 
 ## Discussion 
+recent: https://groups.google.com/a/isocpp.org/forum/#!topic/std-proposals/OKUpODP9-7w
 from https://cplusplus.github.io/EWG/ewg-active.html#35 
 ```
 

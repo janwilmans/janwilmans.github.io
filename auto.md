@@ -120,5 +120,5 @@ to allow multiple such variables on the same line. These are pretty verbose and 
 - https://groups.google.com/a/isocpp.org/forum/#!searchin/std-proposals/anonymous$20variable/std-proposals/BfAtczj81Kg/pga0JJ2JijwJ [2012]
 - https://groups.google.com/a/isocpp.org/forum/#!searchin/std-proposals/anonymous$20variable/std-proposals/OKUpODP9-7w/oQq-asoYCgAJ [2012]
 
-metions:
+mentions:
 - [[unnamed]] attribute: https://groups.google.com/a/isocpp.org/forum/?utm_medium=email&utm_source=footer#!msg/std-proposals/wocdXvM7wok/-thaC8CKBgAJ

@@ -43,7 +43,7 @@ std::unique_lock<std::mutex> lock(m_mutex);
 Here the name 'lock' is never actually used, it exists only keep the mutex in scope.
 I mention this case because the currently propose syntax below does not address this issue.
 
-A more details explanation of this is given in this talk: ('CppCon 2017: Louis Brandy “Curiously Recurring C++ Bugs at Facebook”')[https://www.youtube.com/watch?v=lkgszkPnV8g]
+A more details explanation of this is given in this talk: ['CppCon 2017: Louis Brandy “Curiously Recurring C++ Bugs at Facebook”')](https://www.youtube.com/watch?v=lkgszkPnV8g)
 
 
 ## Example using unnamed variables:

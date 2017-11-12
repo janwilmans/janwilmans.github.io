@@ -5,7 +5,7 @@ A way to express concisely:
 - an object without a name (so it can *not* conflict with any other name within its scope).
 - express explicitly the intent that an object is only to be constructed and destructed.
 
-## Traditional code using macros:
+## Case 1, usage macros:
 
 ```cpp
 struct LogFunction
@@ -34,6 +34,17 @@ int main()
     return 0;
 }
 ```
+
+## Case 2, objects that actually only need to have a 'right to exist' for the duration of the scope have to be named.
+
+```
+std::unique_lock<std::mutex> lock(m_mutex); 
+```
+Here the name 'lock' is never actually used, it exists only keep the mutex in scope.
+I mention this case because the currently propose syntax below does not address this issue.
+
+A more details explanation of this is given in this talk: ('CppCon 2017: Louis Brandy “Curiously Recurring C++ Bugs at Facebook”')[https://www.youtube.com/watch?v=lkgszkPnV8g]
+
 
 ## Example using unnamed variables:
 
@@ -94,13 +105,11 @@ from https://cplusplus.github.io/EWG/ewg-active.html#35
 [Arthur O'Dwyer mentioned](https://groups.google.com/a/isocpp.org/d/msg/std-proposals/OKUpODP9-7w/aEQhdSWLAgAJ) that the Auto Macro is less error-prone
 
 **note that the [Auto macro itself](https://github.com/janwilmans/janwilmans.github.io/edit/master/auto.h) is a candidate to be implemented using the unnamed variable as proposed.**
-```
 
 ## Historical discussion 
 
 35. [tiny] Some concise way to generate a unique, unused variable name
 Section: 3.4 [basic.lookup] Status: Open Submitter: Jeffrey Yasskin Opened: 2012-10-24 Last modified: 2015-05-22
-```
 
 Sometimes we want to define a variable that's unused except for its constructor and destructor. lock_guard<mutex> and ScopeGuard are decent examples of this. In C++11, we have to manually name the variable something unique. Sometimes we use _some_name_##__LINE__ (suitably wrapped so the concatenation happens after expanding __LINE__) to try to generate unique names automatically, and gcc/clang have an extension _some_name_##__COUNTER__
 
@@ -108,7 +117,7 @@ http://gcc.gnu.org/onlinedocs/gcc-4.7.2/cpp/Common-Predefined-Macros.html
 
 to allow multiple such variables on the same line. These are pretty verbose and not convenient for casual use. Haskell allows _ (underscore) to stand in for a variable that's not going to be used. Googlemock defines testing::_ to mean "don't care" as an argument, which is similar but not identical.
 
-**Bristol 2013:** Stroustrup wondered how unique the name needs to be, and wondered whether parallel builds would have problems ensuring the uniqueness. Naumann pointed out that having an unnamed variable is useful also for cases where you don't want the variable's address to be taken etc. Stroustrup and Van Winkel said this is not tiny, and a proper paper is necessary for this issue.
+**Bristol 2013:** Stroustrup wondered how unique the name needs to be and wondered whether parallel builds would have problems ensuring the uniqueness. Naumann pointed out that having an unnamed variable is useful also for cases where you don't want the variable's address to be taken etc. Stroustrup and Van Winkel said this is **not tiny** and a proper paper is necessary for this issue.
 
 **Chicago 2013:** Deemed not as C++14 material, Yasskin or someone else invited to write a paper, straw polls in favor of the feature. Things to consider in the paper: Consider double underscore "__". Can it be used only in local scope? For class members? For globals?
 

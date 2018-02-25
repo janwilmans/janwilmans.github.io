@@ -69,10 +69,13 @@ void main()
 }
 ```
 
-## Syntax
+## Possible syntax
 ```
-auto = foo();     // somewhat consistent with typename = void syntax
+auto = foo();     // considered error prone
 auto [] = foo();  // Yasskin '12 syntax
+
+auto {} = foo();                 
+auto [{}, f ] = make_pair(...); // Aaryaman Sagar '17 
 ```
 
 ## Observations
@@ -90,19 +93,17 @@ Appearently, this could be useful in TMP to add anonymous member functions to a 
 ## Cons
 - SG14/std-proposals discussion feedback: the auto = foo(); syntax is error-prone, it might be an accidentally ommitted name and currently that would give you an compiler error.
 
-## Questions
-- are the presentered usecases worth a language extention?
+## Questions / Concerns 
+- are the presentered usecases worth a language extention? Personally, I'm nolonger convinced that this is worth its trouble. It does not enable new expressiveness and **could** possibly introduce new ambiguities.
 
-## Side effects
-
-- given the information an object's only purpose is for construction/destructor compilers would be free to emit warnings for instances of **named** objects that are not otherwise referenced.
-- to *not* break existing code such a warning would have to be opt-in (disabled by default)
 
 ## Recent discussion 
 recent: https://groups.google.com/a/isocpp.org/forum/#!topic/std-proposals/OKUpODP9-7w
 from https://cplusplus.github.io/EWG/ewg-active.html#35 
 
 [Arthur O'Dwyer mentioned](https://groups.google.com/a/isocpp.org/d/msg/std-proposals/OKUpODP9-7w/aEQhdSWLAgAJ) that the Auto Macro is less error-prone
+
+[Aaryaman Sagar suggested](https://groups.google.com/a/isocpp.org/forum/?utm_medium=email&utm_source=footer#!msg/std-proposals/OKUpODP9-7w/sMUyn5hYBgAJ) auto {} = make_guard() syntax.
 
 **note that the [Auto macro itself](https://github.com/janwilmans/janwilmans.github.io/edit/master/auto.h) is a candidate to be implemented using the unnamed variable as proposed.**
 

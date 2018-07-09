@@ -71,7 +71,7 @@ void main()
 
 ## Possible syntax
 ```
-auto = foo();     // considered error prone
+auto = foo();     // considered error prone by SG14 and Arthur O'Dwyer
 auto [] = foo();  // Yasskin '12 syntax
 
 auto {} = foo();                 
@@ -90,8 +90,16 @@ auto [{}, f ] = make_pair(...); // Aaryaman Sagar '17
 As pointed out by Ansel Sermersheim, you _can_ take its reference if you pass its reference from its own constructor to another object.
 Appearently, this could be useful in TMP to add anonymous member functions to a class, why you would want to do that is not clear it me.
 
-## Cons
+## Cons of auto = foo();
 - SG14/std-proposals discussion feedback: the auto = foo(); syntax is error-prone, it might be an accidentally ommitted name and currently that would give you an compiler error.
+- Arthur O'Dwyer mentioned that 
+```
+auto = make_guard([]{ end_of_scope_action(); });
+
+could be mistakenly written like:
+
+auto = []{ end_of_scope_action(); }; 
+```
 
 ## Questions / Concerns 
 - are the presentered usecases worth a language extention? Personally, I'm nolonger convinced that this is worth its trouble. It does not enable new expressiveness and **could** possibly introduce new ambiguities.
